@@ -1,0 +1,7 @@
+@ convert  (fahr : integer)
+{
+           return 5*(fahr -32)/9;
+}
+
+%%
+     
