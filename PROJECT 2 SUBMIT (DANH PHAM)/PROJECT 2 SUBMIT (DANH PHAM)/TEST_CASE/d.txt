@@ -1,0 +1,27 @@
+@ compare  (total : integer)
+{
+           return total/2;
+}
+%%
+     integer  total;
+	 integer n;
+	 read (total);
+	 write(compare [total]);
+     total := total + n;
+	 
+	 if(total < 1) 
+		write(reject);
+	 else if (n > 1)
+		write (acpect);
+	 else if (total > 10)
+		write (low);
+	 else if (total < 20)
+		write (middle);
+	 else if (total > 20)
+	    write (high);
+	 fi
+	 fi
+	 fi
+	 fi
+	 fi
+	 

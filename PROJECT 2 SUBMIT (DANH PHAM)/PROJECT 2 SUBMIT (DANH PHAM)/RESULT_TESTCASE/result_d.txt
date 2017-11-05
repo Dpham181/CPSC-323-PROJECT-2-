@@ -1,0 +1,567 @@
+Input file name: 
+	Source Code:  
+@ compare  (total : integer)
+{
+           return total/2;
+}
+%%
+     integer  total;
+	 integer n;
+	 read (total);
+	 write(compare [total]);
+     total := total + n;
+	 
+	 if(total < 1) 
+		write(reject);
+	 else if (n > 1)
+		write (acpect);
+	 else if (total > 10)
+		write (low);
+	 else if (total < 20)
+		write (middle);
+	 else if (total > 20)
+	    write (high);
+	 fi
+	 fi
+	 fi
+	 fi
+	 fi
+	 
+
+
+
+............................................................
+
+
+		Syntax rules
+
+ 
+Token:operator		Lexeme:@
+
+<RAT17F> <Opt Function Definitions>%% <Opt Declaration List> <Statement List>
+<Function> @ <Identifier> (<Opt Parameter List>) <Opt Declaration List> <Body>
+
+
+Token:identifier	Lexeme:compare
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:total
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <parameter>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme::
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <:>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+	<IDs'> < Epsilon >
+
+
+Token:keyword	Lexeme:integer
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <qualifier>
+	<Qualifier> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Parameter List'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:{
+	<Opt Declaration List><Epsilon>
+	<Body> { <Statement List> }
+
+
+Token:keyword	Lexeme:return
+	<Statement List> <Statement> <Statement List'>
+	<Statement> <return>
+	<Return> return <Return'>
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:/
+	<Term> <Factor> <Term'>
+	<Term'> /<Factor> <Term'>
+
+
+Token:integer	Lexeme:2
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:}
+	<Statement List'>  <Epsilon>
+
+
+Token:valid operator	Lexeme:%%
+	<Function Definition'> <Epsilon>
+
+
+Token:keyword	Lexeme:integer
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<Qualifier> <integer>
+
+
+Token:identifier	Lexeme:total
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme:;
+	<IDs'> -> Epsilon
+
+
+Token:keyword	Lexeme:integer
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration list'> <Declaration>;
+	 <Declaration> <Qualifier><ID>
+	<Qualifier> <integer>
+
+
+Token:identifier	Lexeme:n
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme:;
+	<IDs'> -> Epsilon
+
+
+Token:keyword	Lexeme:read
+	<Statement> <read>
+Token:seperatorr	Lexeme:(
+Token:identifier	Lexeme:total
+	<Statement> <read> 
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:)
+	<ID'> <Epsilon>
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:write
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <write>
+	<Write> write(<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:compare
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:[
+	<Primary'> [<IDs>]
+
+
+Token:identifier	Lexeme:total
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:]
+	<IDs'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:identifier	Lexeme:total
+	<Statement> <Assign>
+	<Asign> <identifier>
+
+
+Token:operator	Lexeme::=
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:+
+	<Expression> <Term><Expression'>
+	<Expression'> +<Term><Expression'>
+
+
+Token:identifier	Lexeme:n
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:if
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If'>
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:<
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < < >
+
+
+Token:integer	Lexeme:1
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:write
+	<Statement> <write>
+	<Write> write (<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:reject
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:else
+	<Statement> <if>
+	<If'> -> else <Statement> fi
+
+
+Token:keyword	Lexeme:if
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If >
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:n
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:>
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < > >
+
+
+Token:integer	Lexeme:1
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:write
+	<Statement> <write>
+	<Write> write (<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:acpect
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:else
+	<Statement> <if>
+	<If'> -> else <Statement> fi
+
+
+Token:keyword	Lexeme:if
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If >
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:>
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < > >
+
+
+Token:integer	Lexeme:10
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:write
+	<Statement> <write>
+	<Write> write (<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:low
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:else
+	<Statement> <if>
+	<If'> -> else <Statement> fi
+
+
+Token:keyword	Lexeme:if
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If >
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:<
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < < >
+
+
+Token:integer	Lexeme:20
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:write
+	<Statement> <write>
+	<Write> write (<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:middle
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:else
+	<Statement> <if>
+	<If'> -> else <Statement> fi
+
+
+Token:keyword	Lexeme:if
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If >
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:total
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:>
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < > >
+
+
+Token:integer	Lexeme:20
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:write
+	<Statement> <write>
+	<Write> write (<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:high
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:fi
+	<If'> < fi > 
+
+
+Token:keyword	Lexeme:fi
+
+
+Token:keyword	Lexeme:fi
+
+
+Token:keyword	Lexeme:fi
+
+
+Token:keyword	Lexeme:fi
+
+
+....................................
+No syntax error
+Press any key to continue . . . 

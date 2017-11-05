@@ -1,0 +1,226 @@
+
+	Source Code:  
+@ project  (is : floating)
+{
+           return 10.0/(fahr -32.97)/9.9764;
+}
+
+%%
+     boolean   found#nmd#;
+
+	 found#nmd# := true;
+	 if (found#nmd# = false)
+     read(ab##xy);
+     while (low < high)  
+         {  write  (low);
+             write (convert [low]);
+             low := low + step#xy;
+         }
+		 
+
+
+
+............................................................
+
+
+		Syntax rules
+
+ 
+Token:operator		Lexeme:@
+
+<RAT17F> <Opt Function Definitions>%% <Opt Declaration List> <Statement List>
+<Function> @ <Identifier> (<Opt Parameter List>) <Opt Declaration List> <Body>
+
+
+Token:identifier	Lexeme:project
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:is
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <parameter>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme::
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <:>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+	<IDs'> < Epsilon >
+
+
+Token:keyword	Lexeme:floating
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <qualifier>
+	<Qualifier> <floating>
+
+
+Token:seperatorr	Lexeme:)
+	<Parameter List'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:{
+	<Opt Declaration List><Epsilon>
+	<Body> { <Statement List> }
+
+
+Token:keyword	Lexeme:return
+	<Statement List> <Statement> <Statement List'>
+	<Statement> <return>
+	<Return> return <Return'>
+
+
+Token:floating	Lexeme:10.0
+	<Return'> <Expression>;
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <floating>
+
+
+Token:operator	Lexeme:/
+	<Term> <Factor> <Term'>
+	<Term'> /<Factor> <Term'>
+
+
+Token:seperatorr	Lexeme:(
+	<Factor> <Primary>
+	<Primary> (<Expression>)
+
+
+Token:identifier	Lexeme:fahr
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:-
+	<Expression> <Term><Expression'>
+	<Expression'> -<Term><Expression'>
+
+
+Token:floating	Lexeme:32.97
+	<Factor> <Primary>
+	<Primary> <floating>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:operator	Lexeme:/
+	<Term> <Factor> <Term'>
+	<Term'> /<Factor> <Term'>
+
+
+Token:floating	Lexeme:9.9764
+	<Factor> <Primary>
+	<Primary> <floating>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:}
+	<Statement List'>  <Epsilon>
+
+
+Token:valid operator	Lexeme:%%
+	<Function Definition'> <Epsilon>
+
+
+Token:keyword	Lexeme:boolean
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<Qualifier> <boolean>
+
+
+Token:identifier	Lexeme:found#nmd#
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme:;
+	<IDs'> -> Epsilon
+
+
+Token:identifier	Lexeme:found#nmd#
+	<Statement> <Assign>
+	<Asign> <identifier>
+
+
+Token:operator	Lexeme::=
+
+
+Token:keyword	Lexeme:true
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <true>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:if
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <if>
+	<If> if (<Condition>) <Statement> <If Prime>
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:found#nmd#
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:=
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < = >
+
+
+Token:keyword	Lexeme:false
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <false>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:keyword	Lexeme:read
+	<Statement> <read>
+Token:seperatorr	Lexeme:(
+Token:invalid identifier	Lexeme:ab##xy
+....................................
+Error is:invalid identifier, missed ( or , 	line:11
+Press any key to continue . . . 

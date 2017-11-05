@@ -1,0 +1,17 @@
+@ project  (is : floating)
+{
+           return 10.0/(fahr -32.97)/9.9764;
+}
+
+%%
+     boolean   found#nmd#;
+
+	 found#nmd# := true;
+	 if (found#nmd# = false)
+     read(ab##xy);
+     while (low < high)  
+         {  write  (low);
+             write (convert [low]);
+             low := low + step#xy;
+         }
+		 

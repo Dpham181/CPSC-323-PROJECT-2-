@@ -1,0 +1,379 @@
+ 
+	Source Code:  
+@ convert  (fahr : integer)
+{
+           return 5*(fahr -32)/9;
+}
+
+%%
+     integer   low, high, step#xy;
+	 
+     read(low, high, step#xy );
+     while (low < high)  
+         {  write  (low);
+             write (convert [low]);
+             low := low + step#xy;
+         } 
+
+
+
+............................................................
+
+
+		Syntax rules
+
+ 
+Token:operator		Lexeme:@
+
+<RAT17F> <Opt Function Definitions>%% <Opt Declaration List> <Statement List>
+<Function> @ <Identifier> (<Opt Parameter List>) <Opt Declaration List> <Body>
+
+
+Token:identifier	Lexeme:convert
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:fahr
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <parameter>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme::
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <:>
+	<Parameter> <IDs >
+	<IDs> <identifier> <IDs'>
+	<IDs'> < Epsilon >
+
+
+Token:keyword	Lexeme:integer
+
+	<Opt Parameter List> <Parameter List>
+	<parameter list> <qualifier>
+	<Qualifier> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Parameter List'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:{
+	<Opt Declaration List><Epsilon>
+	<Body> { <Statement List> }
+
+
+Token:keyword	Lexeme:return
+	<Statement List> <Statement> <Statement List'>
+	<Statement> <return>
+	<Return> return <Return'>
+
+
+Token:integer	Lexeme:5
+	<Return'> <Expression>;
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:operator	Lexeme:*
+	<Term> <Factor> <Term'>
+	<Term'> *<Factor> <Term'>
+
+
+Token:seperatorr	Lexeme:(
+	<Factor> <Primary>
+	<Primary> (<Expression>)
+
+
+Token:identifier	Lexeme:fahr
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:-
+	<Expression> <Term><Expression'>
+	<Expression'> -<Term><Expression'>
+
+
+Token:integer	Lexeme:32
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:seperatorr	Lexeme:)
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:operator	Lexeme:/
+	<Term> <Factor> <Term'>
+	<Term'> /<Factor> <Term'>
+
+
+Token:integer	Lexeme:9
+	<Factor> <Primary>
+	<Primary> <integer>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:}
+	<Statement List'>  <Epsilon>
+
+
+Token:valid operator	Lexeme:%%
+	<Function Definition'> <Epsilon>
+
+
+Token:keyword	Lexeme:integer
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<Qualifier> <integer>
+
+
+Token:identifier	Lexeme:low
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:,
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+	<IDs'><,identifier>
+
+
+Token:identifier	Lexeme:high
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:,
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+	<IDs'><,identifier>
+
+
+Token:identifier	Lexeme:step#xy
+
+	<Opt Declaration List> <Declaration List> 
+	 <Declartion list> <Declaration>; <Declaration list'>
+	 <Declaration> <Qualifier><ID>
+	<IDs> <identifier> <IDs'>
+
+
+Token:operator	Lexeme:;
+	<IDs'> -> Epsilon
+
+
+Token:keyword	Lexeme:read
+	<Statement> <read>
+Token:seperatorr	Lexeme:(
+Token:identifier	Lexeme:low
+	<Statement> <read> 
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:,
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+	<IDs'> ,<identifier> 
+
+
+Token:identifier	Lexeme:high
+	<Statement> <read> 
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:,
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+	<IDs'> ,<identifier> 
+
+
+Token:identifier	Lexeme:step#xy
+	<Statement> <read> 
+	 <read> (<IDs>)
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:)
+	<ID'> <Epsilon>
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:while
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <while>
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:low
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:<
+	<Primary '> <Epsilon>
+	<Term '> <Epsilon>
+	<Expression'> <Epsilon>
+	<Relop> < < >
+
+
+Token:identifier	Lexeme:high
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:{
+	<Statement> {<compound> }
+	<Compound> { <StatementList> }
+
+
+Token:keyword	Lexeme:write
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <write>
+	<Write> write(<Expression>);
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:low
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:keyword	Lexeme:write
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <write>
+
+
+Token:seperatorr	Lexeme:(
+
+
+Token:identifier	Lexeme:convert
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:seperatorr	Lexeme:[
+	<Primary'> [<IDs>]
+
+
+Token:identifier	Lexeme:low
+	<IDs> <identifier> <IDs'>
+
+
+Token:seperatorr	Lexeme:]
+	<IDs'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:)
+	<Primary'> <Epsilon> 
+	<Term'> <Epsilon> 
+	<Expression'> <Epsilon> 
+
+
+Token:operator	Lexeme:;
+
+
+Token:identifier	Lexeme:low
+	<Statement List> <Statement> <Statement List'>
+	<Statement List'> <Statement>
+	<Statement> <Assign>
+	<Assign> <Identifier> := <Expression>; 
+
+
+Token:operator	Lexeme::=
+
+
+Token:identifier	Lexeme:low
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:+
+	<Expression> <Term><Expression'>
+	<Expression'> +<Term><Expression'>
+
+
+Token:identifier	Lexeme:step#xy
+	<Expression> <Term> <Expression'>
+	<Term> <Factor> <Term'>
+	<Factor> <Primary>
+	<Primary> <identifier><Primary'>
+
+
+Token:operator	Lexeme:;
+	<Primary'> <Epsilon>
+	<Term'> <Epsilon>
+	<Expression'> <Epsilon>
+
+
+Token:seperatorr	Lexeme:}
+	<Statement List'>  <Epsilon>
+
+
+....................................
+No syntax error
+Press any key to continue . . . 

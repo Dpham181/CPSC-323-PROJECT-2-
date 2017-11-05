@@ -1,0 +1,6 @@
+@ project  (is : floating)
+{
+           return 22.00/(fahr -56.11)/11.97;
+}
+%%
+    
