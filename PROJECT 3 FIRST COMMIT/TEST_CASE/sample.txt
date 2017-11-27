@@ -1,0 +1,19 @@
+%% 
+integer   i, max, sum;
+
+sum := 0;
+i := 1;
+read ( max);
+while (i <  max)  {
+	  sum := sum + i;
+	  i  := i + 1; 
+ }
+ write (sum+max);
+ 
+ if (5 => 5) {
+     sum := 5 * 2 + 1;
+ } else {
+     sum := 1 + 2 * 3;
+ } fi
+ write (sum);
+ 
